@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="Gradle: ./app/libs/sinlibs-no-ex-20150903.jar">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/app/libs/sinlibs-no-ex-20150903.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
