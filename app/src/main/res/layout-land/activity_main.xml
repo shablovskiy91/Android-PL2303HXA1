@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:focusable="false"
+	android:focusableInTouchMode="false"
+	android:orientation="vertical"
+	android:padding="@dimen/padding_smal">
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:gravity="center_vertical">
+
+		<Spinner
+			android:id="@+id/sp_baudrate"
+			android:layout_width="0dp"
+			android:layout_height="38dp"
+			android:layout_weight="1"/>
+
+		<Spinner
+			android:id="@+id/sp_DBits"
+			android:layout_width="0dp"
+			android:layout_height="38dp"
+			android:layout_weight="1"/>
+
+		<Spinner
+			android:id="@+id/sp_Parity"
+			android:layout_width="0dp"
+			android:layout_height="38dp"
+			android:layout_weight="1"/>
+
+		<Spinner
+			android:id="@+id/sp_SBits"
+			android:layout_width="0dp"
+			android:layout_height="38dp"
+			android:layout_weight="1"/>
+
+		<Button
+			android:id="@+id/btn_open"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="Open"
+			android:lines="1"/>
+
+		<Button
+			android:id="@+id/btn_close"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="Close"
+			android:lines="1"
+			android:visibility="gone"/>
+
+	</LinearLayout>
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:gravity="center_vertical">
+
+		<CheckBox
+			android:id="@+id/cb_ctsrts"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:layout_weight="1"
+			android:text="CTS/RTS"
+			android:textAppearance="?android:attr/textAppearanceSmall"
+			style="@style/AppTheme"
+			android:lines="2"
+			android:textSize="10sp"/>
+
+		<CheckBox
+			android:id="@+id/cb_xonxoff"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:layout_weight="1"
+			android:text="XON/XOFF"
+			android:textAppearance="?android:attr/textAppearanceSmall"
+			style="@style/AppTheme"
+			android:lines="2"
+			android:textSize="10sp"/>
+
+		<TextView
+			android:id="@+id/tv_dsr"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:textAppearance="?android:attr/textAppearanceSmall"
+			android:text="DSR"
+			android:lines="1"/>
+
+		<TextView
+			android:id="@+id/tv_cts"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:textAppearance="?android:attr/textAppearanceSmall"
+			android:text="CTS"
+			android:lines="1"/>
+
+		<CheckBox
+			android:id="@+id/cb_hex"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:layout_weight="1"
+			android:text="HEX"
+			android:textAppearance="?android:attr/textAppearanceSmall"
+			android:lines="1"
+			android:maxLines="1"
+			android:textSize="10sp"/>
+
+		<CheckBox
+			android:id="@+id/cb_delay"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="Delay"
+			android:textAppearance="?android:attr/textAppearanceSmall"
+			android:lines="1"
+			android:textSize="10sp"/>
+
+		<EditText
+			android:id="@+id/et_delay"
+			android:layout_height="wrap_content"
+			android:layout_width="40dp"
+			android:text="0"
+			android:textSize="14sp"
+			android:lines="1"/>
+
+		<TextView
+			android:layout_height="wrap_content"
+			android:layout_width="wrap_content"
+			android:text="mS"
+			android:lines="1"/>
+
+	</LinearLayout>
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:focusable="false"
+		android:focusableInTouchMode="false">
+
+		<Button
+			android:id="@+id/btn_file"
+			android:layout_height="wrap_content"
+			android:layout_width="wrap_content"
+			android:text="File"
+			android:lines="1"/>
+
+		<Button
+			android:id="@+id/btn_clearsend"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="CLRSND"
+			android:lines="1"/>
+
+		<Button
+			android:id="@+id/btn_clearlog"
+			android:layout_height="wrap_content"
+			android:layout_width="wrap_content"
+			android:text="CLRLOG"
+			android:lines="1"/>
+
+		<Button
+			android:id="@+id/btn_send"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="Send"
+			android:lines="1"/>
+
+		<Button
+			android:id="@+id/btn_cancel"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="Cancel"
+			android:lines="1"
+			android:visibility="gone"/>
+
+		<ProgressBar
+			android:id="@+id/pb_sendprogress"
+			style="?android:attr/progressBarStyleHorizontal"
+			android:layout_height="match_parent"
+			android:layout_width="match_parent"
+			android:layout_marginLeft="5dp"
+			android:layout_marginRight="5dp"/>
+
+	</LinearLayout>
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="0dp"
+		android:layout_marginTop="@dimen/margin_small"
+		android:layout_weight="1"
+		android:orientation="horizontal">
+
+		<EditText
+			android:id="@+id/et_send"
+			android:layout_width="0dp"
+			android:layout_height="match_parent"
+			android:layout_marginRight="@dimen/margin_small"
+			android:layout_weight="1"
+			android:background="@drawable/border"
+			android:gravity="top|left"
+			android:hint="char mode:Hello World\nHEX mode use space segmetation:1E 10 20 F0"
+			android:padding="@dimen/padding_smal"
+			android:textSize="14sp">
+
+		</EditText>
+
+		<ScrollView
+			android:layout_width="0dp"
+			android:layout_height="match_parent"
+			android:layout_weight="1"
+			android:background="@drawable/border">
+
+			<TextView
+				android:id="@+id/tv_log"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:padding="@dimen/padding_smal"
+				android:scrollbars="vertical"
+				android:singleLine="false"
+				android:textAppearance="?android:attr/textAppearanceMedium"
+				android:textSize="14sp"/>
+
+		</ScrollView>
+
+	</LinearLayout>
+
+</LinearLayout>
+
