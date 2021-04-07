@@ -400,7 +400,7 @@ public class MainActivity extends BaseActivity
 				while (curDriver != null) 
 				{
 					PL2303Driver tDriver = curDriver;
-					byte dat = 0;
+					byte dat;
 					synchronized (tDriver) 
 					{
 						dat = tDriver.read();
@@ -508,7 +508,7 @@ public class MainActivity extends BaseActivity
 			curDriver.setBaudRate(Integer.parseInt(sp_baudrate.getSelectedItem().toString()));
 			//set Stop Bits
 			String SBitsItem = sp_SBits.getSelectedItem().toString();
-			if (SBitsItem == "S2") 
+			if (SBitsItem.equals("S2"))
 			{
 				curDriver.setSBits(2);
 			}
@@ -518,7 +518,7 @@ public class MainActivity extends BaseActivity
 			}
 			//set Parity
 			String ParityItem = sp_Parity.getSelectedItem().toString();
-			if (ParityItem == "Even") 
+			if (ParityItem.equals("Even"))
 			{
 				curDriver.setParity(2);
 			}
@@ -659,7 +659,7 @@ public class MainActivity extends BaseActivity
 							for (Byte b : dataList)  // for cycle
 							{
 								//if Cancel button was pressed
-								if (cancelStatus == true)
+								if (cancelStatus)
 								{
 									AddLog("Operation canceled");
 									handler.post(new Runnable()
@@ -682,7 +682,7 @@ public class MainActivity extends BaseActivity
 								checkCTS();
 								checkXonXoff();
 								
-								if (readyToSend == false)
+								if (!readyToSend)
 								{
 									return;
 								}
@@ -794,7 +794,7 @@ public class MainActivity extends BaseActivity
 					checkCTS();
 					checkXonXoff();
 
-					if (readyToSend == false)
+					if (!readyToSend)
 					{
 						return;
 					}
@@ -872,7 +872,7 @@ public class MainActivity extends BaseActivity
 				});
 			timeoutCounter = 0;
 			// Check CTS status. While its false, wait 1 mS. If > timeout, AddLog, return.
-			while (curDriver.getCTS()==false)
+			while (!curDriver.getCTS())
 			{
 				//Wait 1 mS
 				try 
@@ -922,7 +922,7 @@ public class MainActivity extends BaseActivity
 				});
 			timeoutCounter = 0;
 			// Check DSR status. While its false, wait 1 mS. When > timeout, AddLog, return.
-			while (curDriver.getDSR() == false)
+			while (!curDriver.getDSR())
 			{
 				//Wait 1 mS
 				try 
@@ -964,7 +964,7 @@ public class MainActivity extends BaseActivity
 		{
 			timeoutCounter = 0;
 			// Check xoff status. If true, wait timeout. Check again, if true AddLog, return
-			while (xOFFStatus == true)
+			while (xOFFStatus)
 			{
 				//Wait 1 mS
 				try 
@@ -1035,11 +1035,7 @@ public class MainActivity extends BaseActivity
                 String fileContent = readTextFile(uri);
 				et_send.setText(fileContent);
 				/*Toast.makeText(this, fileContent, Toast.LENGTH_LONG).show();*/
-			} 
-			else 
-			{
-                return;
-            }
+			}
         }
     }
 		
@@ -1050,7 +1046,7 @@ public class MainActivity extends BaseActivity
         try
 		{
             reader = new BufferedReader(new InputStreamReader(getContentResolver().openInputStream(uri)));
-            int c = 0;
+            int c;
             while ((c = reader.read()) != -1)
 			{
                 builder.append((char) c);
@@ -1080,7 +1076,7 @@ public class MainActivity extends BaseActivity
 	
 	private void shareFile()
 	{
-		String filePath = "/mnt/sdcard/";
+		String filePath = Environment.getExternalStorageDirectory().getPath();
 		
 		File f = new File(filePath);
 		String shareText = tv_log.getText().toString();
@@ -1138,7 +1134,7 @@ public class MainActivity extends BaseActivity
 		edit.putString("et_send", et_send.getText().toString());
 		edit.putString("et_delay", et_delay.getText().toString());
 		
-		edit.commit();
+		edit.apply();
 		super.onPause();
 	}
 
