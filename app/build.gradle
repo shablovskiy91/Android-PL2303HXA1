@@ -1,13 +1,13 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 20
+    compileSdkVersion 28
     buildToolsVersion "30.0.3"
 
     defaultConfig {
         applicationId "com.sin.android.pl2303hxa"
         minSdkVersion 14
-        targetSdkVersion 19
+        targetSdkVersion 28
     }
 
     buildTypes {
@@ -19,6 +19,6 @@ android {
 }
 
 dependencies {
-    compile 'com.android.support:support-v4:20.0.0'
-    compile files('libs/sinlibs-no-ex-20150903.jar')
+    implementation 'com.android.support:support-v4:28.0.0'
+    implementation files('libs/sinlibs-no-ex-20150903.jar')
 }

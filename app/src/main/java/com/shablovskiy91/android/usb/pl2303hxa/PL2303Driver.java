@@ -98,7 +98,7 @@ public class PL2303Driver
 	
 	// Transceiver properties
 	private static final int MAX_SENDLEN = 1;
-	private static final int SECVBUF_LEN = 40960;
+	private static final int SECVBUF_LEN = 4096;
 	private static final int SENDBUF_LEN = MAX_SENDLEN;
 	
 	// USB control commands
