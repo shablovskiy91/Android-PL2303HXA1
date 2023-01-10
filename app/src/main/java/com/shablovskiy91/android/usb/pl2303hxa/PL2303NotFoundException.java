@@ -1,7 +1,7 @@
 package com.shablovskiy91.android.usb.pl2303hxa;
 
 /**
- * 未发现PL2303 <br/>
+ * PL2303 not found <br/>
  * 
  * @author trb
  * @date 2013-8-16

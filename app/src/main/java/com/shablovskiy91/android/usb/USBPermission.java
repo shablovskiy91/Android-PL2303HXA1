@@ -12,7 +12,7 @@ import android.hardware.usb.UsbDevice;
 import android.hardware.usb.UsbManager;
 
 /**
- * USB授权相关 <br/>
+ * USB authorization related <br/>
  * 
  * @author trb
  * @date 2014-1-22
@@ -29,32 +29,30 @@ public class USBPermission {
 	}
 
 	/**
-	 * 向用户请求获取某个USB设备的操作权限
+	 * Request the user to obtain the operation permission of a USB device
 	 * 
 	 * @param context
-	 *            上下文
+	 *            the context
 	 * @param usbDevice
-	 *            需要获取权限的USB设备
+	 *            USB device that needs permission
 	 * @param callback
-	 *            回调，当获得权限的时候会被调用
-	 * @return 请求之前已经有权限返回true，还没有权限返回false
+	 *            Callback, which will be called when permission is obtained
+	 * @return Returns true if there is permission before the request, and returns false if there is no permission
 	 */
 	public static boolean requestPermission(Context context, UsbDevice usbDevice, PermissionCallback callback) {
 		return requestPermission(context, usbDevice, "action" + System.currentTimeMillis(), callback);
 	}
 
 	/**
-	 * 向用户请求获取某个USB设备的操作权限
-	 * 
+	 * Request the user to obtain the operation permission of a USB device
+	 *
 	 * @param context
-	 *            上下文
+	 *            the context
 	 * @param usbDevice
-	 *            需要获取权限的USB设备
-	 * @param action
-	 *            动作描述
+	 *            USB device that needs permission
 	 * @param callback
-	 *            回调，当获得权限的时候会被调用
-	 * @return 请求之前已经有权限返回true，还没有权限返回false
+	 *            Callback, which will be called when permission is obtained
+	 * @return Returns true if there is permission before the request, and returns false if there is no permission
 	 */
 	public static boolean requestPermission(Context context, UsbDevice usbDevice, String action, PermissionCallback callback) {
 		if (USBPermission.hasPermission(context, usbDevice)) {
@@ -74,7 +72,7 @@ public class USBPermission {
 		}
 	}
 
-	// 广播接收器
+	// broadcast receiver
 	private final static BroadcastReceiver permissionReceiver = new BroadcastReceiver() {
 		public void onReceive(Context context, Intent intent) {
 			String action = intent.getAction();

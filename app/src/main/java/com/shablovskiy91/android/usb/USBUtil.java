@@ -11,8 +11,8 @@ import android.hardware.usb.UsbManager;
 import android.util.Log;
 
 /**
- * USB工具类 <br/>
- * 该类用于USB操作
+ * USB Tools <br/>
+ * This class is used for USB operations
  * 
  * @author trb
  * @date 2014-1-22
@@ -37,15 +37,15 @@ public class USBUtil {
 	}
 
 	/**
-	 * 获取指定厂商ID和产品ID的所有USB设备
+	 * Get all USB devices with specified vendor ID and product ID
 	 * 
 	 * @param context
-	 *            上下文
+	 *            the context
 	 * @param vendorId
-	 *            产商ID, -1时不做判断
+	 *            Manufacturer ID, no judgment when -1
 	 * @param productId
-	 *            产品ID, -1时不做判断
-	 * @return 符合的设备列表
+	 *            Product ID, no judgment when -1
+	 * @return Compliant Device List
 	 */
 	public static List<UsbDevice> getUsbDevices(Context context, int vendorId, int productId) {
 		updateStaticVar(context);
@@ -64,14 +64,14 @@ public class USBUtil {
 	}
 
 	/**
-	 * 获取指定厂商ID和产品ID的USB设备
+	 * Get the USB device with the specified vendor ID and product ID
 	 * 
 	 * @param context
-	 *            上下文
+	 *            the context
 	 * @param vendorId
-	 *            产商ID, -1时不做判断
+	 *            Manufacturer ID, no judgment when -1
 	 * @param productId
-	 *            产品ID, -1时不做判断
+	 *            Product ID, no judgment when -1
 	 * @return
 	 */
 	public static UsbDevice getUsbDevice(Context context, int vendorId, int productId) {

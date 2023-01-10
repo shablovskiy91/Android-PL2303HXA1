@@ -2,22 +2,6 @@ com/shablovskiy91/android/usb/pl2303hxa/PL2303Exception.java
  com.shablovskiy91.android.usb.pl2303hxa.PL2303Exception
 com/shablovskiy91/android/usb/pl2303hxa/PL2303InputStream.java
  com.shablovskiy91.android.usb.pl2303hxa.PL2303InputStream
-com/shablovskiy91/android/usb/pl2303hxa/PL2303NotFoundException.java
- com.shablovskiy91.android.usb.pl2303hxa.PL2303NotFoundException
-com/shablovskiy91/android/usb/pl2303hxa/PL2303Selector.java
- com.shablovskiy91.android.usb.pl2303hxa.PL2303Selector
- com.shablovskiy91.android.usb.pl2303hxa.PL2303Selector$1
- com.shablovskiy91.android.usb.pl2303hxa.PL2303Selector$2
- com.shablovskiy91.android.usb.pl2303hxa.PL2303Selector$3
- com.shablovskiy91.android.usb.pl2303hxa.PL2303Selector$Callback
-com/shablovskiy91/android/usb/USBUtil.java
- com.shablovskiy91.android.usb.USBUtil
-com/shablovskiy91/android/usb/USBPermission.java
- com.shablovskiy91.android.usb.USBPermission
- com.shablovskiy91.android.usb.USBPermission$1
- com.shablovskiy91.android.usb.USBPermission$PermissionCallback
-com/shablovskiy91/android/usb/USBPermissionHolder.java
- com.shablovskiy91.android.usb.USBPermissionHolder
 com/shablovskiy91/android/pl2303terminal/MainActivity.java
  com.shablovskiy91.android.pl2303terminal.MainActivity
  com.shablovskiy91.android.pl2303terminal.MainActivity$1
@@ -51,11 +35,27 @@ com/shablovskiy91/android/pl2303terminal/MainActivity.java
  com.shablovskiy91.android.pl2303terminal.MainActivity$7
  com.shablovskiy91.android.pl2303terminal.MainActivity$8
  com.shablovskiy91.android.pl2303terminal.MainActivity$9
-com/shablovskiy91/android/usb/pl2303hxa/PL2303Driver.java
- com.shablovskiy91.android.usb.pl2303hxa.PL2303Driver
-com/shablovskiy91/android/usb/pl2303hxa/PL2303OutputStream.java
- com.shablovskiy91.android.usb.pl2303hxa.PL2303OutputStream
-com/shablovskiy91/android/usb/pl2303hxa/PL2303SelectorHolder.java
- com.shablovskiy91.android.usb.pl2303hxa.PL2303SelectorHolder
 com/sin/android/pl2303hxa/BuildConfig.java
  com.sin.android.pl2303hxa.BuildConfig
+com/shablovskiy91/android/usb/pl2303hxa/PL2303OutputStream.java
+ com.shablovskiy91.android.usb.pl2303hxa.PL2303OutputStream
+com/shablovskiy91/android/usb/pl2303hxa/PL2303Driver.java
+ com.shablovskiy91.android.usb.pl2303hxa.PL2303Driver
+com/shablovskiy91/android/usb/pl2303hxa/PL2303NotFoundException.java
+ com.shablovskiy91.android.usb.pl2303hxa.PL2303NotFoundException
+com/shablovskiy91/android/usb/pl2303hxa/PL2303Selector.java
+ com.shablovskiy91.android.usb.pl2303hxa.PL2303Selector
+ com.shablovskiy91.android.usb.pl2303hxa.PL2303Selector$1
+ com.shablovskiy91.android.usb.pl2303hxa.PL2303Selector$2
+ com.shablovskiy91.android.usb.pl2303hxa.PL2303Selector$3
+ com.shablovskiy91.android.usb.pl2303hxa.PL2303Selector$Callback
+com/shablovskiy91/android/usb/USBUtil.java
+ com.shablovskiy91.android.usb.USBUtil
+com/shablovskiy91/android/usb/USBPermission.java
+ com.shablovskiy91.android.usb.USBPermission
+ com.shablovskiy91.android.usb.USBPermission$1
+ com.shablovskiy91.android.usb.USBPermission$PermissionCallback
+com/shablovskiy91/android/usb/USBPermissionHolder.java
+ com.shablovskiy91.android.usb.USBPermissionHolder
+com/shablovskiy91/android/usb/pl2303hxa/PL2303SelectorHolder.java
+ com.shablovskiy91.android.usb.pl2303hxa.PL2303SelectorHolder

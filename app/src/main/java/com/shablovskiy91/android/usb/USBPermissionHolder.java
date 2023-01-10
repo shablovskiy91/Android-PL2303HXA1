@@ -3,7 +3,7 @@ package com.shablovskiy91.android.usb;
 import android.content.Context;
 
 /**
- * 授权信息保持 <br/>
+ * Authorization Information Hold <br/>
  * 
  * @author trb
  * @date 2014-1-22

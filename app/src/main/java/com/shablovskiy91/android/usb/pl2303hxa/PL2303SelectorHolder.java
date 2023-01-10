@@ -3,7 +3,9 @@ package com.shablovskiy91.android.usb.pl2303hxa;
 import java.util.List;
 
 /**
- * PL2303选择器信息保持，由于没有使用完整的对话框类，因此需要用该类实例来报存选择过程中的相关操作
+ * PL2303 The selector information is kept. Since the complete dialog class is not used,
+ * it is necessary to use this class instance to report and save the relevant operations in the selection process
+ *
  * @author trb
  * @date 2013-11-18
  */
@@ -12,8 +14,8 @@ public class PL2303SelectorHolder {
 	public int curDriverIndex = -1;
 
 	/**
-	 * 获取当前选中的驱动
-	 * @return 当前选中的驱动
+	 * Get the currently selected driver
+	 * @return currently selected driver
 	 */
 	public PL2303Driver getCurDriver() {
 		return curDriverIndex < 0 ? null : drivers.get(curDriverIndex);
